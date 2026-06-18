@@ -53,7 +53,9 @@ def papar_header():
     st.markdown("""
         <div class="official-header">
             <div style="display: flex; align-items: center;">
-                <div style="font-size: 45px; margin-right: 20px;">🏫</div>
+                <div style="margin-right: 20px;">
+                    <img src="https://img.icons8.com/fluency/48/000000/school.png" alt="Logo" width="50" height="50">
+                </div>
                 <div>
                     <h2 style="margin: 0; color: white; font-family: 'Helvetica Neue', Arial, sans-serif;">SISTEM MAKLUMAT PELAJAR BERPUSAT</h2>
                     <div class="school-info">NEE4099 | SMK RANTAU</div>
@@ -61,9 +63,6 @@ def papar_header():
             </div>
         </div>
     """, unsafe_allowed_html=True)
-
-if 'df_pelajar' not in st.session_state:
-    st.session_state['df_pelajar'] = None
 
 st.sidebar.title("Navigasi Sistem")
 pilihan_page = st.sidebar.radio("Pergi ke:", ["Page 1: Muat Naik Fail", "Page 2: Carian Murid", "Page 3: Cetak Laporan"])
